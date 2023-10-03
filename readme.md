@@ -1,0 +1,1 @@
+To generate yml file "py manage.py spectacular --color --file schema.yml"
