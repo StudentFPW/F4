@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import withRouter from '../withRouter/withRouter';
+
 class Recipes extends React.Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ class Recipes extends React.Component {
     };
 
     updateItems() {
-        axios.get("http://127.0.0.1:8000/recipes/")
+        axios.get(`http://127.0.0.1:8000/recipes/?category=${this.props.params.category}`)
             // .then(response => console.log(response))
             .then(
                 response => {
@@ -32,15 +34,17 @@ class Recipes extends React.Component {
         return !this.state.isLoaded ? "loading..." : (
             <ul>
                 {
-                    this.state.items.map(
-                        (item, index) => <li key={index + 1}>
-                            {item.name} <br />
-                            {item.text}
-                        </li>)
+                    this.state.items.map((item, index) => <li key={index + 1}>
+
+                        <a href='' target="_blank">
+                            <button>{item.name}</button>
+                        </a>
+
+                    </li>)
                 }
             </ul>
         )
     };
 }
 
-export default Recipes;
+export default withRouter(Recipes);
