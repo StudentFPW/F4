@@ -18,7 +18,7 @@ class Recipes extends React.Component {
 
     updateItems() {
         axios.get(`http://127.0.0.1:8000/recipes/?category=${this.props.params.category}`)
-            // .then(response => console.log(response))
+            // .then(response => console.log(response.data.results))
             .then(
                 response => {
                     this.setState({
@@ -36,7 +36,7 @@ class Recipes extends React.Component {
                 {
                     this.state.items.map((item, index) => <li key={index + 1}>
 
-                        <a href={`${}`} target="_blank">
+                        <a href={`${item.url.slice(-3, -1)}`} target="_blank">
                             <button>{item.name}</button>
                         </a>
 

@@ -34,7 +34,7 @@ class Category extends React.Component {
                 {
                     this.state.items.map((item, index) => <li key={index + 1}>
 
-                        <a href={`${}`} target="_blank">
+                        <a href={`${item.url.slice(-3, -1)}`} target="_blank">
                             <button>{item.name}</button>
                         </a>
 

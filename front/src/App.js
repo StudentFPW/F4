@@ -2,24 +2,24 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
-import '../styles/App.css';
+import '../src/styles/App.css';
 
-import Category from '../Category/Category';
-import Recipes from '../Recipes/Recipes'
-import Page from '../Page/Page';
+import Category from './components/Category/Category';
+import Recipes from './components/Recipes/Recipes'
+import Page from './components/Page/Page';
 
 function App() {
   return (
     <React.Fragment>
       <Switch>
 
-        <Route path="/:category/:page">
+        {/* <Route path="/:page">
           <Page />
         </Route>
 
         <Route path="/:category">
           <Recipes />
-        </Route>
+        </Route> */}
 
         <Route path="">
           <Category />
