@@ -4,9 +4,9 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 import '../styles/App.css';
 
-import Category from './Category/Category';
-import Recipes from './Recipes/Recipes'
-import Page from './Page/Page';
+import Category from '../Category/Category';
+import Recipes from '../Recipes/Recipes'
+import Page from '../Page/Page';
 
 function App() {
   return (
