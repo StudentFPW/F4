@@ -5,7 +5,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import '../src/styles/App.css';
 
 import Category from './components/Category/Category';
-import Recipes from './components/Recipes/Recipes'
+import Recipes from './components/Recipes/Recipes';
 import Page from './components/Page/Page';
 
 function App() {
@@ -13,21 +13,21 @@ function App() {
     <React.Fragment>
       <Switch>
 
-        {/* <Route path="/:page">
+        <Route path="/recipest/:page/">
           <Page />
         </Route>
 
-        <Route path="/:category">
+        <Route path="/category/:category/">
           <Recipes />
-        </Route> */}
+        </Route>
 
-        <Route path="">
+        <Route path="/">
           <Category />
         </Route>
 
       </Switch>
     </React.Fragment>
   );
-}
+};
 
 export default App;
