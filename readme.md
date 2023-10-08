@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 (optional) python.exe -m pip install --upgrade pip
 
-cd /back/
+cd .\back\
 
 py manage.py makemigrations
 
@@ -41,7 +41,7 @@ Add new category + recipes in database
 ## Configure the frontend
 
 ```sh
-cd /front/
+cd .\front\
 
 npm install
 
